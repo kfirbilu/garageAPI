@@ -40,9 +40,6 @@ public class VehicleController {
     }
 
 
-//check
-
-
     @PutMapping(path ="{licenceNumber}")
     @RequestMapping(value = "/inflate/{licenceNumber}")
     public void inflateTiresBtLicenceNumber(@PathVariable String licenceNumber)
