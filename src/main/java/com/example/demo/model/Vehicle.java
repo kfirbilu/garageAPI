@@ -15,7 +15,7 @@ public class Vehicle {
 
     Wheels wheels;
 
-    EnergySource energySource;
+    EnergySource energySource = new EnergySource("",0);
 
     float availableEnergyPercentage ;
 
@@ -92,7 +92,7 @@ public class Vehicle {
     }
 
     public float getAvailableEnergyPercentage() {
-        return availableEnergyPercentage;
+        return this.energySource.getEnergyLeft();
     }
 
     public void setAvailableEnergyPercentage(float availableEnergyPercentage) {
