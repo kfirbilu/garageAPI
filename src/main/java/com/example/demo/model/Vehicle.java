@@ -23,9 +23,7 @@ public class Vehicle {
 
 
 
-    public void setWheels(Wheels wheels) {
-        this.wheels = wheels;
-    }
+
 
     public Vehicle(@JsonProperty("type") String type, @JsonProperty("modelName") String modelName, @JsonProperty("licenceNumber") String licenceNumber, @JsonProperty("availableEnergyPercentage") float availableEnergyPercentage, @JsonProperty("maximumTirePressure") float maximumTirePressure) {
         this.type = type;
@@ -55,6 +53,10 @@ public class Vehicle {
     public void rechargeEnergy()
     {
         this.energySource.setEnergyLeft(100);
+    }
+
+    public void setWheels(Wheels wheels) {
+        this.wheels = wheels;
     }
 
     public void inflateTiresToMax(){
@@ -111,6 +113,12 @@ public class Vehicle {
     }
 
 
+
+
+
+
+    ////////////////////////////////////////////////////  Wheels class - START  ////////////////////////////////////////////////////
+
     public class Wheels {
 
         int numberOfWheels=0;
@@ -145,6 +153,12 @@ public class Vehicle {
                     '}';
         }
     }
+
+    ////////////////////////////////////////////////////  Wheels class  - END  ////////////////////////////////////////////////////
+
+
+
+    ////////////////////////////////////////////////////  EnergySource class - START  ////////////////////////////////////////////////////
 
     public class EnergySource {
 
@@ -182,6 +196,8 @@ public class Vehicle {
                     '}';
         }
     }
+
+    ////////////////////////////////////////////////////  EnergySource class - END  ////////////////////////////////////////////////////
 
 
 
